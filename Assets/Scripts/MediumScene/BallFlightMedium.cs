@@ -138,13 +138,13 @@ public class BallFlightMedium : MonoBehaviour {
         // Double click realisation
         if (Time.time - firstClickTime <= 0.3f) {
             if (direction == 1) {
-                gameObject.transform.position = positions[0];
                 curposition = 0;
+                gameObject.transform.position = positions[curposition];
                 isMoving = false;
             }
             else {
-                gameObject.transform.position = positions[positions.Count - 1];
                 curposition = positions.Count - 1;
+                gameObject.transform.position = positions[curposition];
                 isMoving = false;
             }
 
