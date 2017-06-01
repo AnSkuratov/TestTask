@@ -138,6 +138,7 @@ public class BallsFlightAdvanced : MonoBehaviour {
         }
         else {
             SpeedSlider.gameObject.SetActive(false);
+            balls[cur_ball_index].GetComponent<TrailRenderer>().Clear();
         }
 	}
 
