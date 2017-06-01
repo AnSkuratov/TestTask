@@ -67,6 +67,7 @@ public class BallFlightMedium : MonoBehaviour {
         }
         else {
             SpeedSlider.gameObject.SetActive(false);
+            gameObject.GetComponent<TrailRenderer>().Clear();
         }
 	}
 
@@ -131,7 +132,6 @@ public class BallFlightMedium : MonoBehaviour {
     void OnMouseDown() {
 
         if (isMoving == false) {
-            gameObject.GetComponent<TrailRenderer>().Clear();
             isMoving = true;
         }
 
