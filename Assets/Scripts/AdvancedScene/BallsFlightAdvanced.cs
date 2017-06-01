@@ -218,10 +218,8 @@ public class BallsFlightAdvanced : MonoBehaviour {
             if (isMoving == false) {
                 balls[cur_ball_index].GetComponent<TrailRenderer>().Clear();
                 isMoving = true;
-            }
-
-            // Double click realisation
-            if (Time.time - firstClickTime <= 0.3f) {
+            }    // Double click realisation
+            else if (Time.time - firstClickTime <= 0.3f) {
                 if (direction == 1) {
                     curposition = 0;
                     balls[cur_ball_index].transform.position = positions[cur_ball_index][curposition];
